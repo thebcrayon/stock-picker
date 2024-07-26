@@ -1,2 +1,2 @@
-# caesar-cipher
+# Stock Picker
 TOP: Stock Picker

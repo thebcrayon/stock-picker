@@ -1,0 +1,10 @@
+# Implement a method #stock_picker that takes
+# in an array of stock prices, one for each
+# hypothetical day. It should return a pair
+# of days representing the best day to buy
+# and the best day to sell. Days start at 0.
+def stock_picker(days_array)
+  "hello"
+end
+
+p stock_picker(Array.new(3))

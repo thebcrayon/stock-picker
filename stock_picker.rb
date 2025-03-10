@@ -5,17 +5,17 @@ def stock_picker(days_array)
   best_sell = 0
 
   # Gets us each price of the array as a buying price
-  days_array.each_with_index do |buy_price, idx|
+  days_array.each_with_index do |buy_price, buy_index|
     
     # Gives us selling possibilities from only current index forward
-    days_array[idx..days_array.size].each_with_index do |sell_price, sell_index|
+    days_array[buy_index..days_array.size].each_with_index do |sell_price, sell_index|
       
       # Track current profit and change it if necessary
       current_profit = sell_price - buy_price
       if current_profit > highest_profit
         highest_profit = current_profit
-        best_buy = idx
-        best_sell = sell_index + idx # Needs to reference index in context of days_array
+        best_buy = buy_index
+        best_sell = sell_index + buy_index # Needs to reference index in context of days_array
       end
     end
   end
